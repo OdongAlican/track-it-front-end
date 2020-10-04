@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { signInAction } from '../../actions'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Signin = (props) =>{
     let { history } = props
@@ -8,19 +8,23 @@ const Signin = (props) =>{
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('') 
 
-    const saveData=(event)=>{
+    const saveData = (event)=>{
         event.preventDefault()
-        dispatch(
-            signInAction({username, password}, history))
+        dispatch(signInAction({ username, password }, history))
     }
+
+    const errorMessage = useSelector(state => state.authReducer.error)
 
     return (
         <div>
-            <form>
+            <div>
+            <form onSubmit={ saveData }>
                 <input value = { username } onChange={(e) => setUsername(e.target.value)}></input>
                 <input value = { password } onChange={(e) => setPassword(e.target.value)} type="password"></input>
-                <button onClick={ saveData }>Submit</button> 
+                <p>{ errorMessage ? errorMessage : '' }</p>
+                <button type="submit">Submit</button> 
             </form>
+            </div>
         </div>
     )
 }
