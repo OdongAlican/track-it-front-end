@@ -28,8 +28,10 @@ export function signInAction({ username, password }, history){
 export function signUpAction({username, password, age }, history){
     return async (dispatch) => {
         const response = await axios.post(`${URL}/users`, { username, password, age })
-        dispatch({ type: AUTHENTICATED });
-        localStorage.setItem('user', response.data.token)
-        history.push('/activities')
+        if(response.data.token){
+            dispatch({ type: AUTHENTICATED });
+            localStorage.setItem('user', response.data.token)
+            history.push('/activities')
+        }
     }
 }
