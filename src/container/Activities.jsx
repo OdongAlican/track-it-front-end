@@ -1,14 +1,11 @@
 import React, { useEffect } from'react'
 import Activity from '../components/Activity'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { fetchActivities } from '../actions/activitiesAction'
-import { useSelector } from 'react-redux'
 
 const Activities = () => {
 
     const activities = useSelector( state => state.activitiesReducer.activities )
-
-    console.log(activities)
 
     const dispatch = useDispatch()
     useEffect(()=> {
