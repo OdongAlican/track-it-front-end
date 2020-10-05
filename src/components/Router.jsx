@@ -2,18 +2,21 @@ import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import App from './App'
 import Signin from './auth/Signin'
-import Signup from './auth/Signup'
-
+import Activities from '../container/Activities'
+import Navbar from './Navbar'
 
 const Router = () => {
     return (
-        <BrowserRouter>
-            <Switch>
-                <Route path="/" component={ App } exact/>
-                <Route path="/signin" component= { Signin }/>
-                <Route path="/signup" component= { Signup }/>
-            </Switch>
-        </BrowserRouter>
+        <div>
+           <Navbar/> 
+            <BrowserRouter>
+                <Switch>
+                    <Route path="/" component={ App } exact/>
+                    <Route path="/signin" component= { Signin }/>
+                    <Route path="/activities" component= { Activities }/>
+                </Switch>
+            </BrowserRouter>
+        </div>
     )
 }
 
