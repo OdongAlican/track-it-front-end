@@ -1,4 +1,7 @@
-import { FETCH_ACTIVITIES_SUCCESS, FETCH_ACTIVITIES_FAILURE } from '../actions/activitiesAction'
+import { FETCH_ACTIVITIES_SUCCESS, 
+        FETCH_ACTIVITIES_FAILURE, 
+        DELETE_ACTIVITY,
+        CREATE_ACTIVITY } from '../actions/activitiesAction'
 
 const initialState = {
     activities: [],
@@ -18,6 +21,17 @@ const activitiesReducer = ( state = initialState, action) => {
                 ...state,
                 activities: [],
                 error: action.payload
+            }
+        case DELETE_ACTIVITY: 
+            return {
+                ...state,
+                activities: state.activities.filter((data) => data.id !== action.payload),
+                error: ''
+            }
+        case CREATE_ACTIVITY: 
+            return {
+                ...state,
+                activities: [...state.activities, action.payload ]
             }
         default:
             return state
