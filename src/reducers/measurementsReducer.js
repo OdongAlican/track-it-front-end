@@ -2,7 +2,7 @@ import { FETCH_MEASUREMENTS_SUCCESS,
         FETCH_MEASUREMENTS_FAILURE } from '../actions/measurementsAction'
 
 const initialState = {
-measurements: [],
+measurements: [].reverse(),
 error: ''
 }
 
@@ -11,7 +11,7 @@ const measurementsReducer = ( state = initialState, action ) => {
         case FETCH_MEASUREMENTS_SUCCESS:
             return {
                 ...state,
-                measurements: action.payload,
+                measurements: [...action.payload].reverse(),
                 error: ''
             }
         case FETCH_MEASUREMENTS_FAILURE:
