@@ -6,6 +6,7 @@ import Activities from '../container/Activities'
 import Navbar from './Navbar'
 import CreateActivity from './CreateActivity'
 import Measurements from '../container/Measurements'
+import CreateMeasurement from '../components/CreateMeasurement'
 
 const Router = () => {
     return (
@@ -18,6 +19,7 @@ const Router = () => {
                     <Route path="/activities" component= { Activities }/>
                     <Route path="/create-activity" component={CreateActivity}/>
                     <Route path="/activity/:id/measurements" component={ Measurements }/>
+                    <Route path="/activity/:id/create" component={ CreateMeasurement }/>
                 </Switch>
             </BrowserRouter>
         </div>
