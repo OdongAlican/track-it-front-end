@@ -28,8 +28,9 @@ export const deleteActivity = (id) => {
     }
 }
 
-export const createActivity = ({ title }, history) => {
-    const response = axios.post(URL, { title },{ 
+export const createActivity = ({ title, total }, history) => {
+    console.log(total, "inaction")
+    const response = axios.post(URL, { title, total },{ 
         headers: {"Authorization" : `Bearer ${localStorage.user}`} 
     })
 
@@ -38,7 +39,7 @@ export const createActivity = ({ title }, history) => {
     }
     return {
         type: CREATE_ACTIVITY,
-        payload: { title }
+        payload: { title, total }
     }
 }
 
