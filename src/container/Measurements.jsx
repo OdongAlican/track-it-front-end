@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import Measurement from '../components/Measurement'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMeasurements } from '../actions/measurementsAction'
@@ -13,17 +13,20 @@ const Measurements = (props) => {
     useEffect(()=> {
         dispatch(fetchMeasurements(activityId))
     }, [])
-    const measurements = useSelector(state => state.measurementsReducer.measurements)
 
+    const measurements = useSelector(state => state.measurementsReducer.measurements)
   
     for(let i = 0; i < measurements.length; i++){
         timeDifference.push(parseFloat(measurements[i].duration))
         if(timeDifference.length === 1){
              diffVal.push(timeDifference[0])
         }else if ( timeDifference.length > 1){
-            diffVal.push(timeDifference[timeDifference.length - 2] - timeDifference[timeDifference.length - 1])
+            diffVal.push(
+                timeDifference[timeDifference.length - 2] - timeDifference[timeDifference.length - 1]
+                )
         }
     }
+
     return (
         <div>
             <div>
@@ -39,7 +42,11 @@ const Measurements = (props) => {
             <div>
                 {
                     measurements.map((measurement, index) => (
-                        <Measurement index = { index } measurement = { measurement } diffVal = { diffVal }/>
+                        <Measurement 
+                            key = { index }
+                            index = { index } 
+                            measurement = { measurement } 
+                            diffVal = { diffVal }/>
                     ))
                 }
             </div>
