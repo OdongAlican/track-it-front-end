@@ -10,8 +10,8 @@ const Measurement = ({ measurement, index, diffVal }) => {
     let dayToday = today.toUTCString().split(' ')[0]
     let dayDate = date.toUTCString().split(' ')[0]
 
-    let dateToday = today.toUTCString().split(' ')[1]
-    let dateDate = date.toUTCString().split(' ')[1]
+    let dateToday = parseInt(today.toUTCString().split(' ')[1])  
+    let dateDate = parseInt(date.toUTCString().split(' ')[1]) 
 
     let monthToday = today.toUTCString().split(' ')[2]
     let monthDay = date.toUTCString().split(' ')[2]
