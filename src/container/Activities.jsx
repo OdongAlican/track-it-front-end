@@ -3,23 +3,33 @@ import Activity from '../components/Activity'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchActivities } from '../actions/activitiesAction'
 import Summary from '../components/Summary'
+import { Link } from 'react-router-dom'
 
 const Activities = () => {
 
-    const activities = useSelector( state => state.activitiesReducer.activities )
+    const activitiesReducer = useSelector( state => state.activitiesReducer )
     const dispatch = useDispatch()
     useEffect(()=> {
         dispatch(fetchActivities())
     }, [])
-    
-    return(
+
+    return activitiesReducer.loading ? ( <div className="mt-4"> <h1> Loading....</h1> </div> ) : 
+    activitiesReducer.error ? ( <div> { activitiesReducer.error } </div>) :
+    (
         <div>
             <div>
-                <Summary activities = { activities }/>
+                <button>
+                    <Link>
+                     Create Activity
+                    </Link>
+                </button>
+            </div>
+            <div>
+                <Summary activities = { activitiesReducer.activities }/>
             </div>
             <div>
                 {
-                    activities.map((activity, key) => (
+                activitiesReducer.activities.map((activity, key) => (
                         <Activity activity = { activity } key = { key }/>
                     ))
                 }            
