@@ -4,7 +4,6 @@ import axios from 'axios'
 export const FETCH_ACTIVITIES_SUCCESS = 'FETCH_ACTIVITIES_SUCCESS'
 export const FETCH_ACTIVITIES_FAILURE = 'FETCH_ACTIVITIES_FAILURE'
 export const DELETE_ACTIVITY = 'DELETE_ACTIVITY'
-export const CREATE_ACTIVITY = 'CREATE_ACTIVITY'
 
 const URL = 'http://localhost:3000/activities'
 
@@ -28,19 +27,15 @@ export const deleteActivity = (id) => {
     }
 }
 
-export const createActivity = ({ title, total }, history) => {
-    console.log(total, "inaction")
-    const response = axios.post(URL, { title, total },{ 
+export const createActivity = (form, history) => async dispatch => {
+    await axios.post(URL,  form ,{ 
         headers: {"Authorization" : `Bearer ${localStorage.user}`} 
-    })
-
-    if(response){
+    }).then( response => {
+        dispatch(fetchActivities())
         history.push('/activities')
-    }
-    return {
-        type: CREATE_ACTIVITY,
-        payload: { title, total }
-    }
+    } ).catch(error => {
+        console.log(error)
+    })
 }
 
 export const fetchActivities = () => dispatch => {
