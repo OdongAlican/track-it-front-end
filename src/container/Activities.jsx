@@ -11,7 +11,7 @@ const Activities = () => {
     useEffect(()=> {
         dispatch(fetchActivities())
     }, [])
-
+    
     return(
         <div>
             <div>
