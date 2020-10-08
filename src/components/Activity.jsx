@@ -13,6 +13,7 @@ const Activity = ({ activity }) => {
 
     return (
         <div className="card col-md-3 mt-2" >
+            <img src={ activity.avatar.url } alt="boohoo" className="image-det"/>
             <div className="card-body">
                 <h5 className="card-title">{ activity.title }</h5>
                 <h5 className="card-title">{ activity.total }</h5>
@@ -31,7 +32,6 @@ const Activity = ({ activity }) => {
             </div>
         </div>
     )
-
 }
 
 export default Activity
