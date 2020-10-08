@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-// export const FETCH_ACTIVITIES_REQUEST = 'FETCH_ACTIVITIES_REQUEST'
+export const FETCH_ACTIVITIES_REQUEST = 'FETCH_ACTIVITIES_REQUEST'
 export const FETCH_ACTIVITIES_SUCCESS = 'FETCH_ACTIVITIES_SUCCESS'
 export const FETCH_ACTIVITIES_FAILURE = 'FETCH_ACTIVITIES_FAILURE'
 export const DELETE_ACTIVITY = 'DELETE_ACTIVITY'
@@ -11,6 +11,10 @@ export const fetchActivitiesSuccess = activities => ({
     type: FETCH_ACTIVITIES_SUCCESS,
     payload: activities
 })
+
+export const fetchActivitiesRequest = () => ({
+    type: FETCH_ACTIVITIES_REQUEST,
+  });
 
 export const fetchActivitiesFailure = error => ({
     type: FETCH_ACTIVITIES_FAILURE,
@@ -28,11 +32,12 @@ export const deleteActivity = (id) => {
 }
 
 export const createActivity = (form, history) => async dispatch => {
+    history.push('/activities')
+    dispatch(fetchActivitiesRequest())
     await axios.post(URL,  form ,{ 
         headers: {"Authorization" : `Bearer ${localStorage.user}`} 
     }).then( response => {
         dispatch(fetchActivities())
-        history.push('/activities')
     } ).catch(error => {
         console.log(error)
     })
