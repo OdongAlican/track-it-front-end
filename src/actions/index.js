@@ -35,3 +35,8 @@ export function signUpAction({username, password, age }, history){
         }
     }
 }
+
+export function signOut(){
+    localStorage.clear('user')
+    window.location.href = '/signin';
+}
