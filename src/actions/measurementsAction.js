@@ -1,7 +1,6 @@
 import axios from 'axios'
 export const FETCH_MEASUREMENTS_SUCCESS = 'FETCH_MEASUREMENTS_SUCCESS'
 export const FETCH_MEASUREMENTS_FAILURE = 'FETCH_MEASUREMENTS_FAILURE'
-export const CREATE_MEASUREMENT = 'CREATE_MEASUREMENT'
 
 const URL = 'http://localhost:3000/activities'
 
@@ -16,16 +15,14 @@ export const fetchMeasurementsFailure = error => ({
     payload: error
 })
 
-export const createMeasurement = ({ duration, date }, activityId) => {
-    console.log(activityId)
+export const createMeasurement = ({ duration, date }, activityId)=> dispatch => {
     axios.post(`${URL}/${activityId}/measurements`, { duration, date  },{ 
         headers: {"Authorization" : `Bearer ${localStorage.user}`} 
+    }).then(response => {
+        dispatch(fetchMeasurements(activityId))
+    }).catch(error => {
+        dispatch(fetchMeasurementsFailure(error))
     })
- 
-    return {
-        type: CREATE_MEASUREMENT,
-        payload: { duration, date }
-    }
 }
 
 export const fetchMeasurements = (id) => dispatch => {
