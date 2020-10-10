@@ -18,8 +18,10 @@ const Activities = () => {
     (
         <div>
             <div>
-                <button>
-                    <Link>
+                <button className="btn btn-primary mt-2 ml-2 text-white mb-2">
+                    <Link className="text-white" to={{
+                        pathname: '/create-activity'
+                    }}>
                      Create Activity
                     </Link>
                 </button>
