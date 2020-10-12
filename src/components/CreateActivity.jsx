@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { createActivity } from '../actions/activitiesAction'
 import { useDispatch } from 'react-redux'
+import Footer from '../components/Footer'
 
 const CreateActivity = ({ history }) => {
     const [title, setTitle] = useState('')
@@ -20,6 +21,7 @@ const CreateActivity = ({ history }) => {
     }
 
     return (
+        <div>
         <div className="card col-md-3 p-3">
             <h3>Create Activity</h3>
             <form onSubmit={ submitAcvtivty }>
@@ -44,6 +46,8 @@ const CreateActivity = ({ history }) => {
                     Create
                 </button>
             </form>
+        </div>
+        <Footer/>
         </div>
     )
 }
