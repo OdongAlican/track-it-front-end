@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom'
 import Footer from './Footer'
 
 const CreateMeasurement = (props) => {
-    const activityId = props.location.state
-    const actTitle = props.location.actTitle
+    const activity = props.location.state
     const dispatch = useDispatch()
     const [watch, setWatch] = useState('00:00:00:00')
     let [ timer, setTimer ] = useState(false)
@@ -46,17 +45,19 @@ const CreateMeasurement = (props) => {
         clearInterval(timer)
         setTimer(false)
         
-        let duration = (parseInt(watch.toString().split(':')[0].trim()) + 
+        let duration = ( parseInt(watch.toString().split(':')[0].trim()) + 
         ( parseInt(watch.toString().split(':')[1].trim()) / 60) +
         ( parseInt(watch.toString().split(':')[2].trim()) / 3600)).toFixed(2)
         let date = new Date()
-        dispatch(createMeasurement({duration, date }, activityId))
+        dispatch(createMeasurement({duration, date }, activity.id))
 
     }
     return (
         <div className="measure-section">
             <div className="activity-header">
-                <p>Measure { actTitle }</p>
+                <p style={{
+                    color: "grey"
+                }}>Measure { activity.title }</p>
             </div>
             <div className="mx-auto mt-4 clock-border">
                 <div className="h1 d-flex justify-content-center">
@@ -67,10 +68,9 @@ const CreateMeasurement = (props) => {
                     <button onClick={ startWatch } className="start-watch mr-1">Start</button>
                     <button onClick={ stopWatch } className="stop-watch mr-1">
                         <Link className="text-white" to={{
-                            pathname: `/activity/${ activityId }/measurements`,
-                            state : activityId,
-                            actTitle : actTitle
-                        }}>
+                                pathname: `/activity/${ activity.id }/measurements`,
+                                state : activity
+                            }}>
                             Stop
                         </Link>
                     </button>
