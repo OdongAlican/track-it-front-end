@@ -6,14 +6,13 @@ import { Link } from 'react-router-dom'
 import Footer from '../components/Footer'
 
 const Measurements = (props) => {
-    const activityId = props.location.state
-    const actTitle = props.location.actTitle
+    const activity = props.location.state
     const dispatch = useDispatch()
     let timeDifference = []
     let diffVal = []
 
     useEffect(()=> {
-        dispatch(fetchMeasurements(activityId))
+        dispatch(fetchMeasurements(activity.id))
     }, [])
 
     const measurements = useSelector(state => state.measurementsReducer.measurements)
@@ -31,14 +30,13 @@ const Measurements = (props) => {
 
     return (
         <div>
-            <div className="measurement-top">
-                <button className= "btn btn-primary mt-2 ml-2 "> 
+            <div className="measurement-top d-flex">
+                <button className= "btn-plus mt-2 mr-1"> 
                     <Link className="text-white" to={{
-                        pathname: `/activity/${activityId}/create`,
-                        state : activityId,
-                        actTitle : actTitle
+                        pathname: `/activity/${activity.id}/create`,
+                        state : activity,
                     }}>
-                        Add
+                        +
                     </Link>
                  </button>
             </div>
