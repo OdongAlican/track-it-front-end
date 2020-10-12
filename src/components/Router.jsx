@@ -8,6 +8,7 @@ import Measurements from '../container/Measurements'
 import CreateMeasurement from '../components/CreateMeasurement'
 import PrivateRoute from './PrivateRoute'
 import Signup from '../components/auth/Signup'
+import Information from './Information'
 
 const Router = () => {
     return (
@@ -17,6 +18,7 @@ const Router = () => {
                 <Switch>
                     <Route exact path="/signin" component= { Signin }/>
                     <Route exact path="/signup" component= { Signup }/>
+                    <PrivateRoute exact path="/information" component={ Information }/>
                     <PrivateRoute exact path="/activities" component= { Activities }/>
                     <PrivateRoute exact path="/create-activity" component={CreateActivity}/>
                     <PrivateRoute exact path="/activity/:id/measurements" component={ Measurements }/>
