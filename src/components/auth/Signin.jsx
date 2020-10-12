@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signInAction } from '../../actions'
 import { useDispatch, useSelector } from 'react-redux'
-import Signup from './Signup'
+import { Link } from 'react-router-dom'
 
 const Signin = (props) =>{
     let { history } = props
@@ -17,8 +17,8 @@ const Signin = (props) =>{
     const errorMessage = useSelector(state => state.authReducer.error)
 
     return (
-        <div className="d-flex">
-            <div className="bg-secondary col-md-6 border-right p-3">
+        <div>
+            <div className="login-section col-md-6 border-right p-3">
                 <h3>Log In</h3>
                 <form onSubmit={ saveData }>
                     <input placeholder="Enter User Name" className="form-control mb-2 col-md-6" value = { username } onChange={(e) => setUsername(e.target.value)}></input>
@@ -26,10 +26,13 @@ const Signin = (props) =>{
                     <p className="text-danger">{ errorMessage ? errorMessage : '' }</p>
                     <button type="submit" className="btn btn-primary">Submit</button> 
                 </form>
+                <Link to={{
+                    pathname: "/signup"
+                    }}>
+                        Don't have an account?
+                </Link>
             </div>
-            <div className="bg-secondary col-md-6 p-3">
-                <Signup history = { history }/>
-            </div>
+
         </div>
     )
 }

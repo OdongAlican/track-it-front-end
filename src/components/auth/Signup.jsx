@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from 'react-redux'
 import { signUpAction } from '../../actions'
+import { Link } from 'react-router-dom'
 
 const Signup = ( props ) => {
 
@@ -17,6 +18,7 @@ const Signup = ( props ) => {
 
     return(
         <div>
+        <div className="login-section col-md-6 border-right p-3">
             <h3>Sign Up</h3>
         <form onSubmit = { submitData }>
             <input 
@@ -27,6 +29,7 @@ const Signup = ( props ) => {
             <input 
             placeholder="Enter Password"  
             className="form-control col-md-6 mb-2"
+            type="password"
             value = { password } 
             onChange= { e => setPassword(e.target.value )}></input>
             <input  
@@ -36,6 +39,13 @@ const Signup = ( props ) => {
             onChange = { e => setAge(e.target.value)}></input>
             <button type="submit" className="btn btn-primary mt-2">Submit</button>
         </form> 
+        <Link to={{
+                pathname: "/signin"
+            }}>
+                Already have an Account?
+            </Link>
+        </div>
+
         </div>
     )
 }
