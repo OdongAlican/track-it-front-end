@@ -3,9 +3,11 @@ import Measurement from '../components/Measurement'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchMeasurements } from '../actions/measurementsAction'
 import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const Measurements = (props) => {
     const activityId = props.location.state
+    const actTitle = props.location.actTitle
     const dispatch = useDispatch()
     let timeDifference = []
     let diffVal = []
@@ -29,13 +31,14 @@ const Measurements = (props) => {
 
     return (
         <div>
-            <div>
+            <div className="measurement-top">
                 <button className= "btn btn-primary mt-2 ml-2 "> 
                     <Link className="text-white" to={{
                         pathname: `/activity/${activityId}/create`,
-                        state : activityId
+                        state : activityId,
+                        actTitle : actTitle
                     }}>
-                        Add Measurement
+                        Add
                     </Link>
                  </button>
             </div>
@@ -50,6 +53,7 @@ const Measurements = (props) => {
                     ))
                 }
             </div>
+            <Footer/>
         </div>
     )
 }
