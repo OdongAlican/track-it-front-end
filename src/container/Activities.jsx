@@ -3,7 +3,7 @@ import Activity from '../components/Activity'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchActivities } from '../actions/activitiesAction'
 import Summary from '../components/Summary'
-import { Link } from 'react-router-dom'
+import Footer from '../components/Footer'
 
 const Activities = () => {
 
@@ -13,31 +13,29 @@ const Activities = () => {
         dispatch(fetchActivities())
     }, [])
 
+    let todaysDate = new Date()
+    let result = todaysDate.toUTCString().split(' ')
+    result.splice(4,2)
+    let finalValue = result.join(' ')
+
     return activitiesReducer.loading ? ( <div className="mt-4"> <h1> Loading....</h1> </div> ) : 
     activitiesReducer.error ? ( <div> { activitiesReducer.error } </div>) :
     (
-        <div>
-            <div>
-                <button className="btn btn-primary mt-2 ml-2 text-white mb-2">
-                    <Link className="text-white" to={{
-                        pathname: '/create-activity'
-                    }}>
-                     Create Activity
-                    </Link>
-                </button>
-            </div>
-            <div>
+        <div className="home-section">
+            <div className="d-flex justify-content-center align-items-center pt-2">{ finalValue }</div>
+            <div className="w-100">
                 <Summary activities = { activitiesReducer.activities }/>
             </div>
-            <div>
+            <div className="d-flex row col-sm-12 ml-1 activities-main">
                 {
                 activitiesReducer.activities.map((activity, key) => (
                         <Activity activity = { activity } key = { key }/>
                     ))
                 }            
             </div>
+            <Footer/>
         </div>
-    )
+    ) 
 
 }
 
