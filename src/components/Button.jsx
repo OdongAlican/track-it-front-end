@@ -5,10 +5,15 @@ const Button = ({ detail }) => {
     return(
         <div className="link-div px-0">
             <button className="link-button w-100 h-100">
-                    <Link to={{
+                    <Link style={
+                        {
+                            color: "#ABAEB3"
+                        }
+                    } to={{
                         pathname: `${ detail.path }`
                     }}>
-                     { detail.name }
+                    <i className={ detail.className } ></i>
+                     <p>{ detail.name }</p>
                     </Link>
             </button>
         </div>
