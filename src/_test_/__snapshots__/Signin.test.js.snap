@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Signin snapshot 1`] = `
+Array [
+  <div
+    data-testid="appSignin"
+  >
+    <div
+      className="login-section col-md-6 border-right p-3"
+    >
+      <h3>
+        Log In
+      </h3>
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          className="form-control mb-2 col-md-6"
+          onChange={[Function]}
+          placeholder="Enter User Name"
+          value=""
+        />
+        <input
+          className="form-control col-md-6"
+          onChange={[Function]}
+          placeholder="Enter Password"
+          type="password"
+          value=""
+        />
+        <p
+          className="text-danger"
+        >
+          test
+        </p>
+        <button
+          className="btn btn-primary"
+          type="submit"
+        >
+          Submit
+        </button>
+      </form>
+      <a
+        href="/signup"
+        onClick={[Function]}
+      >
+        Don't have an account?
+      </a>
+    </div>
+  </div>,
+  ",",
+]
+`;

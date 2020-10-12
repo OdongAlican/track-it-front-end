@@ -53,7 +53,7 @@ const CreateMeasurement = (props) => {
 
     }
     return (
-        <div className="measure-section">
+        <div data-testid="appCreateMeasurement" className="measure-section">
             <div className="activity-header">
                 <p style={{
                     color: "grey"

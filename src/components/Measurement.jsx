@@ -69,7 +69,7 @@ const Measurement = ({ measurement, index, diffVal }) => {
                 </div>
         }
     return(
-        <div>
+        <div data-testid="appMeasurement">
             <div className="col-md-4p-1 py-1 pl-2" style={{
                 backgroundColor: "#F3F4F6",
                 color: 'grey'
@@ -86,7 +86,7 @@ const Measurement = ({ measurement, index, diffVal }) => {
                         <span>{ measurement.duration } Hours</span>
                     </div>
                     <div className="mx-auto w-50 p-1 date-value d-flex">
-                       <h6 className="ml-auto"> { errorValue }<span> hrs <i class="fas fa-angle-right"></i> </span></h6> 
+                       <h6 className="ml-auto"> { errorValue }<span> hrs <i className="fas fa-angle-right"></i> </span></h6> 
                     </div>
                 </div>
             </div>

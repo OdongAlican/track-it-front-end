@@ -21,17 +21,17 @@ const CreateActivity = ({ history }) => {
     }
 
     return (
-        <div className="create-activity">
+        <div data-testid="appCreateActivity" className="create-activity">
         <div>
             <div className="activity-heading mb-2 p-3">
                 <span>You can add a photo to your activity</span>
             </div>
             <div className="image-upload m-3 p-2 d-flex">
                 <div className="left-image">
-                    <i class="fas fa-tv"></i>
+                    <i className="fas fa-tv"></i>
                 </div>
                 <div className="right-image">
-                    <i class="fas fa-church"></i>
+                    <i className="fas fa-church"></i>
                 </div>
             </div>
             <div>

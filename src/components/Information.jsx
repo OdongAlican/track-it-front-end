@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from './Footer'
 
 const Information = () => (
-    <div >
+    <div data-testid="appInformation" >
     <div className="information-section">
         <div className="copyright p-2 mb-3 d-flex ">
         <h5 className="mx-auto"> Copyright © 2020 by Odong Alican </h5>

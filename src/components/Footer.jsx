@@ -11,7 +11,7 @@ const Footer = () => {
     ]
     
     return (
-            <div className="footer">
+            <div data-testid="appFooter" className="footer">
                 {
                     paths.map((val, key)=> (
                         <Button key = { key } detail = { val }/>

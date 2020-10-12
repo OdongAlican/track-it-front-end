@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Button snapshot 1`] = `
+Array [
+  <div
+    className="link-div px-0"
+    data-testid="appButton"
+  >
+    <button
+      className="link-button w-100 h-100"
+    >
+      <a
+        href="/test-path"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+          }
+        }
+      >
+        <i
+          className="sample color"
+        />
+        <p>
+          test name
+        </p>
+      </a>
+    </button>
+  </div>,
+  ",",
+]
+`;

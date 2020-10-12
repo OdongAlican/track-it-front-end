@@ -17,7 +17,7 @@ const Signin = (props) =>{
     const errorMessage = useSelector(state => state.authReducer.error)
 
     return (
-        <div>
+        <div data-testid="appSignin">
             <div className="login-section col-md-6 border-right p-3">
                 <h3>Log In</h3>
                 <form onSubmit={ saveData }>

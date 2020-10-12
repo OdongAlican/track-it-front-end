@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Button = ({ detail }) => {
     return(
-        <div className="link-div px-0">
+        <div data-testid="appButton" className="link-div px-0">
             <button className="link-button w-100 h-100">
                     <Link style={
                         {

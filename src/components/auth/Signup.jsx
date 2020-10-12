@@ -17,7 +17,7 @@ const Signup = ( props ) => {
     }
 
     return(
-        <div>
+        <div data-testid="appSignup">
         <div className="login-section col-md-6 border-right p-3">
             <h3>Sign Up</h3>
         <form onSubmit = { submitData }>

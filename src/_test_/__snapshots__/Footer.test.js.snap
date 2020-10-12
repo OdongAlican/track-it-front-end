@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Footer snapshot 1`] = `
+<div
+  className="footer"
+  data-testid="appFooter"
+>
+  <div
+    className="link-div px-0"
+    data-testid="appButton"
+  >
+    <button
+      className="link-button w-100 h-100"
+    >
+      <a
+        href="/activities"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+          }
+        }
+      >
+        <i
+          className="far fa-chart-bar"
+        />
+        <p>
+          Home
+        </p>
+      </a>
+    </button>
+  </div>
+  <div
+    className="link-div px-0"
+    data-testid="appButton"
+  >
+    <button
+      className="link-button w-100 h-100"
+    >
+      <a
+        href="/create-activity"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+          }
+        }
+      >
+        <i
+          className="fas fa-chart-line fa-1x"
+        />
+        <p>
+          Create Activity
+        </p>
+      </a>
+    </button>
+  </div>
+  <div
+    className="link-div px-0"
+    data-testid="appButton"
+  >
+    <button
+      className="link-button w-100 h-100"
+    >
+      <a
+        href="/information"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+          }
+        }
+      >
+        <i
+          className="fas fa-chart-pie"
+        />
+        <p>
+          Information
+        </p>
+      </a>
+    </button>
+  </div>
+  <div
+    className="link-div px-0"
+    data-testid="appButton"
+  >
+    <button
+      className="link-button w-100 h-100"
+    >
+      <a
+        href="/activities"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+          }
+        }
+      >
+        <i
+          className="fas fa-ellipsis-h"
+        />
+        <p>
+          More
+        </p>
+      </a>
+    </button>
+  </div>
+</div>
+`;
