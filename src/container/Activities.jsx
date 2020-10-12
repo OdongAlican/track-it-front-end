@@ -22,11 +22,22 @@ const Activities = () => {
     activitiesReducer.error ? ( <div> { activitiesReducer.error } </div>) :
     (
         <div className="home-section">
-            <div className="d-flex justify-content-center align-items-center pt-2">{ finalValue }</div>
+
+            <div className="d-flex justify-content-center align-items-center py-3 date-section">
+                <div className="first-div">
+                    <i class="fas fa-angle-left"></i>
+                </div>
+                <div className="second-div">
+                    { finalValue }
+                </div>
+                <div className="third-div">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
             <div className="w-100">
                 <Summary activities = { activitiesReducer.activities }/>
             </div>
-            <div className="d-flex row col-sm-12 ml-1 activities-main">
+            <div className="d-flex  col-sm-12 activities-main row mx-0">
                 {
                 activitiesReducer.activities.map((activity, key) => (
                         <Activity activity = { activity } key = { key }/>
