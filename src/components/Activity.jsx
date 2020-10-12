@@ -12,26 +12,33 @@ const Activity = ({ activity }) => {
     }
 
     return (
-        <div className="main-section d-flex p-1 m-2 bg-white" >
-            <div className="w-50 bg-secondary image-section">
+        <div className="main-section d-flex p-1 bg-white" >
+            <div className="w-50 image-section p-3">
                 <img src={ activity.avatar.url } alt="boohoo" className="image-det"/>
             </div>
             <div className="activity-body ml-1">
                 <div>
-                    <span className="activity-title text-secondary">{ activity.title }</span>
+                    <span className="activity-title text-secondary">
+                    { activity.title.length < 9 ? `${activity.title}` :
+                        `${activity.title.substring(0,10)}...` }
+                    </span>
                 </div>
-                <div>
-                    <span className="activity-text text-secondary">{ activity.total }</span>
+                <div className="activity-text text-secondary d-flex">
+                    <div className="activity-inner">
+                        { activity.total }
+                    </div> 
+                    <div>
+                        <small>Hrs</small>
+                    </div> 
                 </div>
                 <div className="lower-section">
                     <Link className="links-info" to={{
-                        pathname: `/activity/${activity.id}/measurements`,
-                        state: activity.id,
-                        actTitle: activity.title
+                        pathname: `/activity/${ activity.id }/measurements`,
+                        state: activity
                     }}>
                         Details
                     </Link>
-                    <i className="far fa-trash-alt ml-4 text-secondary" onClick = {() => deleteAct(activity.id) }></i>
+                    <i className="far fa-trash-alt ml-4 trash-section" onClick = {() => deleteAct(activity.id) }></i>
                 </div>
             </div>
         </div>
