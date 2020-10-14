@@ -7,7 +7,6 @@ const Summary = ( { activities }) => {
         });
 
         let res = newArray.reduce((val, num) => val + num, 0)
-        console.log(res)
     return(
         <div data-testid="appSummary" className="d-flex summary-section">
             {

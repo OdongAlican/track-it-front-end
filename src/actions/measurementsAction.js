@@ -2,7 +2,7 @@ import axios from 'axios'
 export const FETCH_MEASUREMENTS_SUCCESS = 'FETCH_MEASUREMENTS_SUCCESS'
 export const FETCH_MEASUREMENTS_FAILURE = 'FETCH_MEASUREMENTS_FAILURE'
 
-const URL = 'http://localhost:3000/activities'
+const URL = 'https://enigmatic-cliffs-07216.herokuapp.com/activities'
 
 
 export const fetchMeasurementsSuccess = measurements => ({
