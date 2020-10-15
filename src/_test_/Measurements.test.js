@@ -10,7 +10,10 @@ import Measurements from '../container/Measurements';
 afterEach(cleanup);
 const initialState = {
   measurementsReducer: {
-    measurements: ['test', 'sample'],
+    measurements: [{
+      date : "December 17, 1995 03:24:00",
+      duration : "12"
+    }],
     error: 'test',
   },
 };
@@ -20,7 +23,9 @@ const mockStore = configureStore(middlewares);
 let store;
 
 const location = {
-  state: 'sample',
+  state: {
+    id: 1
+  },
 };
 
 it('renders Measurements correctly', () => {
@@ -32,7 +37,7 @@ it('renders Measurements correctly', () => {
   );
   const result = getAllByTestId('appMeasurements');
   expect(result[0])
-    .toHaveTextContent('+ Invalid Date Hours 0.00 hrs Invalid Date Hours 0.00 hrs HomeCreate ActivityInformationMore');
+    .toHaveTextContent('Sun, 17 Dec 1995 00:24:00 GMT12 Hours 0.00 hrsHomeCreate ActivityInformationMore');
 });
 
 it('renders Measurements correctly', () => {

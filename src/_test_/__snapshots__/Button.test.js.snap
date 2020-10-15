@@ -8,6 +8,7 @@ Array [
   >
     <button
       className="link-button w-100 h-100"
+      type="button"
     >
       <a
         href="/test-path"

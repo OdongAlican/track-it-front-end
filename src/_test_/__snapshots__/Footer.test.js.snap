@@ -11,6 +11,7 @@ exports[`matches Footer snapshot 1`] = `
   >
     <button
       className="link-button w-100 h-100"
+      type="button"
     >
       <a
         href="/activities"
@@ -36,6 +37,7 @@ exports[`matches Footer snapshot 1`] = `
   >
     <button
       className="link-button w-100 h-100"
+      type="button"
     >
       <a
         href="/create-activity"
@@ -61,6 +63,7 @@ exports[`matches Footer snapshot 1`] = `
   >
     <button
       className="link-button w-100 h-100"
+      type="button"
     >
       <a
         href="/information"
@@ -86,6 +89,7 @@ exports[`matches Footer snapshot 1`] = `
   >
     <button
       className="link-button w-100 h-100"
+      type="button"
     >
       <a
         href="/activities"

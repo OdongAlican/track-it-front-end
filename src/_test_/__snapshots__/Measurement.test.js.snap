@@ -45,7 +45,8 @@ exports[`matches Measurement snapshot 1`] = `
           Date
         </h6>
         <span>
-           Hours
+           
+          Hours
         </span>
       </div>
       <div
@@ -57,11 +58,11 @@ exports[`matches Measurement snapshot 1`] = `
            
           0.00
           <span>
-             hrs 
+             
+            hrs
             <i
               className="fas fa-angle-right"
             />
-             
           </span>
         </h6>
       </div>

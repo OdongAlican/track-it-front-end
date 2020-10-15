@@ -74,6 +74,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/activities"
@@ -99,6 +100,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/create-activity"
@@ -124,6 +126,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/information"
@@ -149,6 +152,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/activities"

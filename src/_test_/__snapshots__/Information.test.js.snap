@@ -40,6 +40,7 @@ exports[`matches Information snapshot 1`] = `
     >
       <button
         className="link-button w-100 h-100"
+        type="button"
       >
         <a
           href="/activities"
@@ -65,6 +66,7 @@ exports[`matches Information snapshot 1`] = `
     >
       <button
         className="link-button w-100 h-100"
+        type="button"
       >
         <a
           href="/create-activity"
@@ -90,6 +92,7 @@ exports[`matches Information snapshot 1`] = `
     >
       <button
         className="link-button w-100 h-100"
+        type="button"
       >
         <a
           href="/information"
@@ -115,6 +118,7 @@ exports[`matches Information snapshot 1`] = `
     >
       <button
         className="link-button w-100 h-100"
+        type="button"
       >
         <a
           href="/activities"

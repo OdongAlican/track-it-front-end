@@ -16,7 +16,8 @@ Array [
           }
         }
       >
-        Measure 
+        Measure
+         
       </p>
     </div>
     <div
@@ -36,12 +37,14 @@ Array [
       <button
         className="start-watch mr-1"
         onClick={[Function]}
+        type="button"
       >
         Start
       </button>
       <button
         className="stop-watch mr-1"
         onClick={[Function]}
+        type="button"
       >
         <a
           className="text-white"
@@ -62,6 +65,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/activities"
@@ -87,6 +91,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/create-activity"
@@ -112,6 +117,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/information"
@@ -137,6 +143,7 @@ Array [
       >
         <button
           className="link-button w-100 h-100"
+          type="button"
         >
           <a
             href="/activities"

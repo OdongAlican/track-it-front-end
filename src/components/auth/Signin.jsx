@@ -1,40 +1,49 @@
-import React, { useState } from "react";
-import { signInAction } from '../../actions'
-import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/require-default-props */
 
-const Signin = (props) =>{
-    let { history } = props
-    const dispatch = useDispatch()
-    const [username, setUsername] = useState('')
-    const [password, setPassword] = useState('') 
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { signInAction } from '../../actions';
 
-    const saveData = (event)=>{
-        event.preventDefault()
-        dispatch(signInAction({ username, password }, history))
-    }
+const Signin = props => {
+  const { history } = props;
+  const dispatch = useDispatch();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-    const errorMessage = useSelector(state => state.authReducer.error)
+  const saveData = event => {
+    event.preventDefault();
+    dispatch(signInAction({ username, password }, history));
+  };
 
-    return (
-        <div data-testid="appSignin">
-            <div className="login-section col-md-6 border-right p-3">
-                <h3>Log In</h3>
-                <form onSubmit={ saveData }>
-                    <input placeholder="Enter User Name" className="form-control mb-2 col-md-6" value = { username } onChange={(e) => setUsername(e.target.value)}></input>
-                    <input placeholder="Enter Password" className="form-control col-md-6" value = { password } onChange={(e) => setPassword(e.target.value)} type="password"></input>
-                    <p className="text-danger">{ errorMessage ? errorMessage : '' }</p>
-                    <button type="submit" className="btn btn-primary">Submit</button> 
-                </form>
-                <Link to={{
-                    pathname: "/signup"
-                    }}>
-                        Don't have an account?
-                </Link>
-            </div>
+  const errorMessage = useSelector(state => state.authReducer.error);
 
-        </div>
-    )
-}
+  return (
+    <div data-testid="appSignin">
+      <div className="login-section col-md-6 border-right p-3">
+        <h3>Log In</h3>
+        <form onSubmit={saveData}>
+          <input placeholder="Enter User Name" className="form-control mb-2 col-md-6" value={username} onChange={e => setUsername(e.target.value)} />
+          <input placeholder="Enter Password" className="form-control col-md-6" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+          <p className="text-danger">{ errorMessage || '' }</p>
+          <button type="submit" className="btn btn-primary">Submit</button>
+        </form>
+        <Link to={{
+          pathname: '/signup',
+        }}
+        >
+          Don't have an account?
+        </Link>
+      </div>
 
-export default Signin
+    </div>
+  );
+};
+
+Signin.propTypes = {
+  history: PropTypes.string,
+};
+
+export default Signin;
