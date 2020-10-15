@@ -18,7 +18,7 @@ export function signInAction({ username, password }, history) {
         type: AUTHENTICATION_ERROR,
         payload: 'Invalid username or Password',
       });
-      history.push('/signin');
+      history.push('/');
     }
   };
 }
@@ -36,5 +36,5 @@ export function signUpAction({ username, password, age }, history) {
 
 export function signOut() {
   localStorage.clear('user');
-  window.location.href = '/signin';
+  window.location.href = '/';
 }

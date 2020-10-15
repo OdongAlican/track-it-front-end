@@ -45,7 +45,7 @@ const Signup = props => {
           <button type="submit" className="btn btn-primary mt-2">Submit</button>
         </form>
         <Link to={{
-          pathname: '/signin',
+          pathname: '/',
         }}
         >
           Already have an Account?

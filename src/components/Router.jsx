@@ -15,7 +15,7 @@ const Router = () => (
     <Navbar />
     <BrowserRouter>
       <Switch>
-        <Route exact path="/signin" component={Signin} />
+        <Route exact path="/" component={Signin} />
         <Route exact path="/signup" component={Signup} />
         <PrivateRoute exact path="/information" component={Information} />
         <PrivateRoute exact path="/activities" component={Activities} />
