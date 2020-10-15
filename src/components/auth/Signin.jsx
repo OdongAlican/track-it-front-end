@@ -21,12 +21,12 @@ const Signin = props => {
   const errorMessage = useSelector(state => state.authReducer.error);
 
   return (
-    <div data-testid="appSignin">
-      <div className="login-section col-md-6 border-right p-3">
+    <div data-testid="appSignin" className="general-login-section">
+      <div className="login-section p-3">
         <h3>Log In</h3>
         <form onSubmit={saveData}>
-          <input placeholder="Enter User Name" className="form-control mb-2 col-md-6" value={username} onChange={e => setUsername(e.target.value)} />
-          <input placeholder="Enter Password" className="form-control col-md-6" value={password} onChange={e => setPassword(e.target.value)} type="password" />
+          <input placeholder="Enter User Name" value={username} onChange={e => setUsername(e.target.value)} />
+          <input placeholder="Enter Password" value={password} onChange={e => setPassword(e.target.value)} type="password" />
           <p className="text-danger">{ errorMessage || '' }</p>
           <button type="submit" className="btn btn-primary">Submit</button>
         </form>

@@ -30,6 +30,11 @@ export function signUpAction({ username, password, age }, history) {
       dispatch({ type: AUTHENTICATED });
       localStorage.setItem('user', response.data.token);
       history.push('/activities');
+    } else {
+      dispatch({
+        type: AUTHENTICATION_ERROR,
+        payload: 'Invalid User credentials',
+      });
     }
   };
 }
