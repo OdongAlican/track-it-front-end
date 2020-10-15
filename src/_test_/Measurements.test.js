@@ -11,8 +11,8 @@ afterEach(cleanup);
 const initialState = {
   measurementsReducer: {
     measurements: [{
-      date : "December 17, 1995 03:24:00",
-      duration : "12"
+      date: 'December 17, 1995 03:24:00',
+      duration: '12',
     }],
     error: 'test',
   },
@@ -24,7 +24,7 @@ let store;
 
 const location = {
   state: {
-    id: 1
+    id: 1,
   },
 };
 
