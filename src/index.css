@@ -181,6 +181,15 @@ i {
   justify-content: center;
 }
 
+.header-section h3,
+.login-section h3 {
+  font-weight: bold;
+}
+
+.login-section h3 {
+  color: gray;
+}
+
 .display-positive,
 .display-negative {
   width: 50px;
