@@ -64,7 +64,7 @@ i {
   align-items: center;
 }
 
-.summary-section::-webkit-scrollbar{
+.summary-section::-webkit-scrollbar {
   width: 0;
 }
 
@@ -73,7 +73,7 @@ i {
 }
 
 .activities-main {
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
 
 .lower-section {
@@ -109,7 +109,7 @@ i {
 
 .image-section {
   height: 100%;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
 
 .trash-section {
@@ -184,7 +184,7 @@ i {
 }
 
 .clock-border {
-  border: 1px solid #F3F4F6;
+  border: 1px solid #f3f4f6;
   height: 17em;
   display: flex;
   width: 17em;
@@ -202,7 +202,7 @@ i {
 }
 
 .stop-watch {
-  background-color: #97E494;
+  background-color: #97e494;
 }
 
 .activity-header {
@@ -212,7 +212,7 @@ i {
 }
 
 .measure-section {
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   height: 100vh;
   margin-top: 60px;
 }
@@ -224,14 +224,14 @@ i {
 }
 
 .login-section {
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   height: 100vh;
   margin-top: 60px;
 }
 
 .nav-bar-section {
   position: fixed;
-  background-color: #42B5E8;
+  background-color: #42b5e8;
   width: 100%;
   z-index: 1;
   top: 0;
@@ -260,7 +260,7 @@ i {
 
 .btn-plus {
   border: none;
-  background-color: #42B5E8;
+  background-color: #42b5e8;
   padding: 5px 10px;
   font-weight: bold;
   margin-bottom: 3px;
@@ -270,13 +270,13 @@ i {
 .create-activity {
   margin-top: 60px;
   height: 100vh;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
 }
 
 .activity-heading {
   padding: 10px;
   text-align: center;
-  color: #AFB0B2;
+  color: #afb0b2;
   width: 100%;
   background-color: #fff;
 }
@@ -287,7 +287,7 @@ i {
 
 .left-image,
 .right-image {
-  background-color: #A3A6AD;
+  background-color: #a3a6ad;
   margin: 0 5px;
   flex: 1;
   display: flex;
@@ -295,7 +295,7 @@ i {
   align-items: center;
   padding: 5px;
   font-size: 150px;
-  color: #D1D2D6;
+  color: #d1d2d6;
 }
 
 .input-control {
@@ -308,20 +308,20 @@ i {
 
 .btn-control {
   padding: 10px 25px;
-  background-color: #97E494;
+  background-color: #97e494;
   border: none;
   color: #fff;
   margin-left: 1em;
 }
 
 .file-section {
-  background-color: #A3A6AD;
+  background-color: #a3a6ad;
   padding: 10px;
 }
 
 .information-section {
   margin-top: 60px;
-  background-color: #F3F4F6;
+  background-color: #f3f4f6;
   padding: 20px;
   height: 100vh;
 }
@@ -334,14 +334,14 @@ i {
 }
 
 .date-section {
-  border-bottom: 2px solid #F3F4F6;
-  color: #A3A6AD;
+  border-bottom: 2px solid #f3f4f6;
+  color: #a3a6ad;
 }
 
 .activity-text small {
   font-weight: bold;
 }
- 
+
 .activity-inner {
   font-size: 20px;
   font-weight: bold;
