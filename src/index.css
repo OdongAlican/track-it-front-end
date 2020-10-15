@@ -76,12 +76,6 @@ i {
   min-width: 167px;
 }
 
-.activities-main {
-  background-color: #f3f4f6;
-  margin-left: 15% !important;
-  width: 85%;
-}
-
 .lower-section {
   position: absolute;
   bottom: 0;
@@ -97,7 +91,7 @@ i {
   font-weight: bold;
   width: 70%;
   display: flex;
-  justify-content: center ;
+  justify-content: center;
 }
 
 .image-det {
@@ -239,7 +233,7 @@ i {
 
 .measure-section {
   background-color: #f3f4f6;
-  height: 100vh;
+  padding-bottom: 20px;
   margin-top: 60px;
 }
 
@@ -285,6 +279,10 @@ i {
   margin-top: 60px;
 }
 
+.application-measurement {
+  width: 100%;
+}
+
 .date-value {
   display: flex;
   flex-direction: column;
@@ -312,8 +310,12 @@ i {
 
 .create-activity {
   margin-top: 60px;
-  height: 100vh;
   background-color: #f3f4f6;
+}
+
+.create-activity-inner {
+  width: 85%;
+  margin-left: 15%;
 }
 
 .activity-heading {
@@ -366,7 +368,8 @@ i {
   margin-top: 60px;
   background-color: #f3f4f6;
   padding: 20px;
-  height: 100vh;
+  width: 85%;
+  margin-left: 15%;
 }
 
 .copyright {
@@ -383,8 +386,9 @@ i {
 }
 
 .activities-main {
+  background-color: #f3f4f6;
+  margin-left: 15% !important;
   width: 85%;
-  margin-left: 15%;
   display: flex;
 }
 
@@ -429,7 +433,7 @@ i {
   padding: 2px 5px;
   color: #fff;
   margin-bottom: 2px;
-  background-color: #42B5E8;
+  background-color: #42b5e8;
 }
 
 .title-div-section {
@@ -440,8 +444,12 @@ i {
   width: 0;
 }
 
-@media only screen and (max-width: 768px) {
+.measurement-outer-section {
+  width: 85%;
+  margin-left: 15%;
+}
 
+@media only screen and (max-width: 768px) {
   .footer {
     display: flex;
     flex-direction: row;
@@ -477,7 +485,10 @@ i {
     width: 100%;
   }
 
-  .summary-display-section {
+  .summary-display-section,
+  .create-activity-inner,
+  .information-section,
+  .measurement-outer-section {
     width: 100%;
     margin-left: 0;
   }
@@ -486,5 +497,4 @@ i {
     font-size: small;
     font-weight: bold;
   }
-  
 }

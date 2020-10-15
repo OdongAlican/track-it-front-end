@@ -6,7 +6,9 @@ Array [
     className="create-activity"
     data-testid="appCreateActivity"
   >
-    <div>
+    <div
+      className="create-activity-inner"
+    >
       <div
         className="activity-heading mb-2 p-3"
       >

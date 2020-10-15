@@ -34,21 +34,22 @@ const Measurements = ({ location }) => {
 
   return (
     <div data-testid="appMeasurements">
-      <div className="measurement-top d-flex">
-        <button type="button" className="btn-plus mt-2 mr-1">
-          <Link
-            className="text-white"
-            to={{
-              pathname: `/activity/${activity.id}/create`,
-              state: activity,
-            }}
-          >
-            +
-          </Link>
-        </button>
-      </div>
-      <div>
-        {
+      <div className="measurement-outer-section">
+        <div className="measurement-top d-flex">
+          <button type="button" className="btn-plus mt-2 mr-1">
+            <Link
+              className="text-white"
+              to={{
+                pathname: `/activity/${activity.id}/create`,
+                state: activity,
+              }}
+            >
+              +
+            </Link>
+          </button>
+        </div>
+        <div>
+          {
                     measurements.map((measurement, index) => (
                       <Measurement
                         key={index}
@@ -58,6 +59,7 @@ const Measurements = ({ location }) => {
                       />
                     ))
                 }
+        </div>
       </div>
       <Footer />
     </div>

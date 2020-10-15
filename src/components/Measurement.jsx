@@ -78,9 +78,9 @@ const Measurement = ({ measurement, index, diffVal }) => {
     );
   }
   return (
-    <div data-testid="appMeasurement">
+    <div data-testid="appMeasurement" className="application-measurement">
       <div
-        className="col-md-4p-1 py-1 pl-2"
+        className="application-measurement-one p-1 py-1 pl-2"
         style={{
           backgroundColor: '#F3F4F6',
           color: 'grey',
@@ -91,7 +91,7 @@ const Measurement = ({ measurement, index, diffVal }) => {
         {' '}
 
       </div>
-      <div className="col-md-4 px-0">
+      <div className="application-measurement-two px-0">
         <div className="d-flex p-2 random">
           <div>
             { positive }
@@ -115,7 +115,7 @@ const Measurement = ({ measurement, index, diffVal }) => {
               <span>
                 {' '}
                 hrs
-                <i className="fas fa-angle-right" />
+                <i className="fas fa-angle-right ml-2 mt-2" />
               </span>
             </h6>
           </div>
