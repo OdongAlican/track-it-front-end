@@ -40,7 +40,7 @@ exports[`matches Signup snapshot 1`] = `
       </button>
     </form>
     <a
-      href="/signin"
+      href="/"
       onClick={[Function]}
     >
       Already have an Account?
