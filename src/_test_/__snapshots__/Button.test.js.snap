@@ -7,7 +7,7 @@ Array [
     data-testid="appButton"
   >
     <button
-      className="link-button w-100 h-100"
+      className="link-button"
       type="button"
     >
       <a

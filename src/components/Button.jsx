@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Button = ({ detail }) => (
   <div data-testid="appButton" className="link-div px-0">
-    <button type="button" className="link-button w-100 h-100">
+    <button type="button" className="link-button">
       <Link
         style={
                         {

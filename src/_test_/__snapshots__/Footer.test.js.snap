@@ -10,7 +10,7 @@ exports[`matches Footer snapshot 1`] = `
     data-testid="appButton"
   >
     <button
-      className="link-button w-100 h-100"
+      className="link-button"
       type="button"
     >
       <a
@@ -23,7 +23,7 @@ exports[`matches Footer snapshot 1`] = `
         }
       >
         <i
-          className="far fa-chart-bar"
+          className="far fa-chart-bar footer-btn"
         />
         <p>
           Home
@@ -36,7 +36,7 @@ exports[`matches Footer snapshot 1`] = `
     data-testid="appButton"
   >
     <button
-      className="link-button w-100 h-100"
+      className="link-button"
       type="button"
     >
       <a
@@ -49,7 +49,7 @@ exports[`matches Footer snapshot 1`] = `
         }
       >
         <i
-          className="fas fa-chart-line fa-1x"
+          className="fas fa-chart-line footer-btn"
         />
         <p>
           Create Activity
@@ -62,7 +62,7 @@ exports[`matches Footer snapshot 1`] = `
     data-testid="appButton"
   >
     <button
-      className="link-button w-100 h-100"
+      className="link-button"
       type="button"
     >
       <a
@@ -75,7 +75,7 @@ exports[`matches Footer snapshot 1`] = `
         }
       >
         <i
-          className="fas fa-chart-pie"
+          className="fas fa-chart-pie footer-btn"
         />
         <p>
           Information
@@ -88,7 +88,7 @@ exports[`matches Footer snapshot 1`] = `
     data-testid="appButton"
   >
     <button
-      className="link-button w-100 h-100"
+      className="link-button"
       type="button"
     >
       <a
@@ -101,7 +101,7 @@ exports[`matches Footer snapshot 1`] = `
         }
       >
         <i
-          className="fas fa-ellipsis-h"
+          className="fas fa-ellipsis-h footer-btn"
         />
         <p>
           More

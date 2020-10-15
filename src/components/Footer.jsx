@@ -4,10 +4,10 @@ import Button from './Button';
 
 const Footer = () => {
   const paths = [
-    { path: '/activities', name: 'Home', className: 'far fa-chart-bar' },
-    { path: '/create-activity', name: 'Create Activity', className: 'fas fa-chart-line fa-1x' },
-    { path: '/information', name: 'Information', className: 'fas fa-chart-pie' },
-    { path: '/activities', name: 'More', className: 'fas fa-ellipsis-h' },
+    { path: '/activities', name: 'Home', className: 'far fa-chart-bar footer-btn' },
+    { path: '/create-activity', name: 'Create Activity', className: 'fas fa-chart-line footer-btn' },
+    { path: '/information', name: 'Information', className: 'fas fa-chart-pie footer-btn' },
+    { path: '/activities', name: 'More', className: 'fas fa-ellipsis-h footer-btn' },
   ];
 
   return (
