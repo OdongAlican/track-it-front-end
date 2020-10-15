@@ -16,15 +16,15 @@ const Activity = ({ activity }) => {
 
   return (
     <div data-testid="appActivity" className="main-section d-flex p-1 bg-white">
-      <div className="w-50 image-section p-3">
+      <div className="image-section p-3">
         <img src={activity.avatar.url} alt="boohoo" className="image-det" />
       </div>
       <div className="activity-body ml-1">
-        <div>
-          <span className="activity-title text-secondary">
-            { activity.title.length < 9 ? `${activity.title}`
-              : `${activity.title.substring(0, 10)}...` }
-          </span>
+        <div className="w-100 title-div-section">
+          <div className="activity-title text-secondary d-flex">
+            { activity.title.length < 15 ? `${activity.title}`
+              : `${activity.title.substring(0, 20)}...` }
+          </div>
         </div>
         <div className="activity-text text-secondary d-flex">
           <div className="activity-inner">
@@ -42,9 +42,16 @@ const Activity = ({ activity }) => {
               state: activity,
             }}
           >
-            Details
+            <button
+              type="button"
+              className="button-details w-75 mr-1"
+            >
+              Details
+            </button>
           </Link>
-          <i className="far fa-trash-alt ml-4 trash-section" onClick={() => deleteAct(activity.id)} />
+          <div>
+            <i className="far fa-trash-alt trash-section" onClick={() => deleteAct(activity.id)} />
+          </div>
         </div>
       </div>
     </div>

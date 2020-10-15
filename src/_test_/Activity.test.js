@@ -35,7 +35,7 @@ it('renders Activity correctly', () => {
     </Router>,
   );
   const result = getAllByTestId('appActivity');
-  expect(result[0]).toHaveTextContent('test title...test totalHrsDetails');
+  expect(result[0]).toHaveTextContent('test titletest totalHrsDetails');
 });
 
 it('renders Activity correctly', () => {

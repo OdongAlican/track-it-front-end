@@ -49,10 +49,10 @@
 }
 
 .main-section {
-  width: 45%;
-  height: 100px;
+  height: 150px;
   position: relative;
   margin: 11px 11px;
+  width: 45%;
 }
 
 i {
@@ -61,7 +61,6 @@ i {
 
 .summary-section {
   overflow-x: auto;
-  width: 477px;
 }
 
 .summary-alignment {
@@ -79,11 +78,16 @@ i {
 
 .activities-main {
   background-color: #f3f4f6;
+  margin-left: 15% !important;
+  width: 85%;
 }
 
 .lower-section {
   position: absolute;
   bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .links-info {
@@ -91,6 +95,9 @@ i {
   text-decoration: none;
   color: lightgray;
   font-weight: bold;
+  width: 70%;
+  display: flex;
+  justify-content: center ;
 }
 
 .image-det {
@@ -117,6 +124,16 @@ i {
 .image-section {
   height: 100%;
   background-color: #f3f4f6;
+  width: 50%;
+}
+
+.activity-body {
+  width: 50%;
+  padding: 5px 20px 5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
 }
 
 .trash-section {
@@ -128,8 +145,10 @@ i {
 }
 
 .activity-title {
-  font-size: small;
+  font-size: larger;
   font-weight: bold;
+  overflow-x: auto;
+  width: 100%;
 }
 
 .menu-section {
@@ -360,6 +379,19 @@ i {
 .date-section {
   border-bottom: 2px solid #f3f4f6;
   color: #a3a6ad;
+  margin-left: 15%;
+}
+
+.activities-main {
+  width: 85%;
+  margin-left: 15%;
+  display: flex;
+}
+
+.summary-display-section {
+  width: 85%;
+  margin-left: 15%;
+  background-color: #fff;
 }
 
 .activity-text small {
@@ -392,6 +424,22 @@ i {
   justify-content: center;
 }
 
+.button-details {
+  border: none;
+  padding: 2px 5px;
+  color: #fff;
+  margin-bottom: 2px;
+  background-color: #42B5E8;
+}
+
+.title-div-section {
+  overflow-x: auto;
+}
+
+.title-div-section::-webkit-scrollbar {
+  width: 0;
+}
+
 @media only screen and (max-width: 768px) {
 
   .footer {
@@ -415,4 +463,28 @@ i {
     height: 100%;
     background-color: #303944;
   }
+
+  .main-section {
+    height: 100px;
+  }
+
+  .date-section {
+    margin-left: 0;
+  }
+
+  .activities-main {
+    margin-left: 0 !important;
+    width: 100%;
+  }
+
+  .summary-display-section {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .activity-title {
+    font-size: small;
+    font-weight: bold;
+  }
+  
 }

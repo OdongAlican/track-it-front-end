@@ -16,7 +16,7 @@ exports[`matches navbar snapshot 1`] = `
     className="itag-section"
   >
     <i
-      className="fas fa-bars"
+      className="fas fa-power-off"
       onClick={[Function]}
     />
   </div>

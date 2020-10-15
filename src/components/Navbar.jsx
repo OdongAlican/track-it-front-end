@@ -26,7 +26,7 @@ const Navbar = () => {
       </div>
       <div className="itag-section">
         <i
-          className="fas fa-bars"
+          className="fas fa-power-off"
           onClick={() => setShowMenu(!showMenu)}
         />
       </div>
