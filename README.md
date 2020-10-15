@@ -14,7 +14,7 @@
 
 
 ## Live Version 
-- [Live Link](https://online-str-app.herokuapp.com/)
+- [Live Link](https://trackingappk.herokuapp.com/)
 
 ## Video Description Link
 - [Video](https://www.loom.com/share/a1184b5f407145d29fb7535cfc586acd)
@@ -81,7 +81,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/OdongAlican/catalogue-of-recipes/issues).
+Feel free to check the [issues page](https://github.com/OdongAlican/track-it-front-end/issues).
 
 ## Show your support
 
