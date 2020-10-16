@@ -17,7 +17,7 @@
 - [Live Link](https://trackingappk.herokuapp.com/)
 
 ## Video Description Link
-- [Video](https://www.loom.com/share/a1184b5f407145d29fb7535cfc586acd)
+- [Video](https://www.loom.com/share/adf35c8e794d4a17b97ab95a35a834c0)
 
 ## App Images
 ![First Image](public/Dashboard.png)
@@ -75,6 +75,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 - Twitter: [@odongsandie](https://twitter.com/odongsandie)
 - Linkedin: [Sunday Alican odong](https://www.linkedin.com/in/sunday-alican-odong/)
 - [Email](mailto:sandieo.2020@gmail.com)
+
+## Credits
+
+Thanks to [Gregoire Vella and others on Behance](https://www.behance.net/gregoirevella) for his awesome design work. I based my work on  [this](https://www.behance.net/gallery/13271423/Bodytrackit-An-iOs-app-Branding-UX-and-UI) design.
 
 
 ## 🤝 Contributing
