@@ -36,17 +36,17 @@ const Measurements = ({ location }) => {
     <div data-testid="appMeasurements">
       <div className="measurement-outer-section">
         <div className="measurement-top d-flex">
-          <button type="button" className="btn-plus mt-2 mr-1">
-            <Link
-              className="text-white"
-              to={{
-                pathname: `/activity/${activity.id}/create`,
-                state: activity,
-              }}
-            >
+          <Link
+            className="link-class"
+            to={{
+              pathname: `/activity/${activity.id}/create`,
+              state: activity,
+            }}
+          >
+            <button type="button" className="btn-plus mt-2 mr-1 text-white">
               +
-            </Link>
-          </button>
+            </button>
+          </Link>
         </div>
         <div>
           {
