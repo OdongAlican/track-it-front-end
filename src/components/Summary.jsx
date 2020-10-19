@@ -22,7 +22,7 @@ const Summary = ({ activities }) => {
                       <div key={index} className=" card-stuff pt-2 pb-2">
                         <div
                           className="percentage-section"
-                          style={{ 'border-right': '5px solid #94E28E' }}
+                          style={{ borderRight: '5px solid #94E28E' }}
                         >
                           <div>{ percentageValue }</div>
                           <div>%</div>
@@ -36,8 +36,8 @@ const Summary = ({ activities }) => {
                         <div
                           className="percentage-section"
                           style={{
-                            'border-right': '5px solid #F24429',
-                            'border-bottom': '5px solid #F24429',
+                            borderRight: '5px solid #F24429',
+                            borderBottom: '5px solid #F24429',
                           }}
                         >
                           <div>{ percentageValue }</div>
@@ -52,9 +52,9 @@ const Summary = ({ activities }) => {
                         <div
                           className="percentage-section"
                           style={{
-                            'border-right': '5px solid #94E28E',
-                            'border-bottom': '5px solid #94E28E',
-                            'border-left': '5px solid #94E28E',
+                            borderRight: '5px solid #94E28E',
+                            borderBottom: '5px solid #94E28E',
+                            borderLeft: '5px solid #94E28E',
                           }}
                         >
                           <div>{ percentageValue }</div>
