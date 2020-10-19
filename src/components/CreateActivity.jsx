@@ -23,7 +23,7 @@ const CreateActivity = ({ history }) => {
 
   return (
     <div data-testid="appCreateActivity" className="create-activity">
-      <div className="create-activity-inner">
+      <div className="create-activity-inner pb-3">
         <div className="activity-heading mb-2 p-3">
           <span>You can add a photo to your activity</span>
         </div>

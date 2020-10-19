@@ -80,7 +80,7 @@ const Measurement = ({ measurement, index, diffVal }) => {
   return (
     <div data-testid="appMeasurement" className="application-measurement">
       <div
-        className="application-measurement-one p-1 py-1 pl-2"
+        className="application-measurement-one p-1 py-1 pl-4"
         style={{
           backgroundColor: '#F3F4F6',
           color: 'grey',

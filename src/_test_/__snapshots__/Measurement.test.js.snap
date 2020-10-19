@@ -6,7 +6,7 @@ exports[`matches Measurement snapshot 1`] = `
   data-testid="appMeasurement"
 >
   <div
-    className="application-measurement-one p-1 py-1 pl-2"
+    className="application-measurement-one p-1 py-1 pl-4"
     style={
       Object {
         "backgroundColor": "#F3F4F6",

@@ -19,7 +19,15 @@
 .link-div {
   height: 120px;
   width: 100%;
-  border: 0.5px solid gray;
+  border: 0.5px solid #f3f4f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  flex: 1;
+  text-align: center;
+  color: #fff;
 }
 
 .footer-btn {
@@ -112,7 +120,7 @@ i {
   position: fixed;
   top: 0;
   height: 100em;
-  margin-top: 60px;
+  margin-top: 65px;
 }
 
 .image-section {
@@ -314,7 +322,13 @@ i {
   padding: 5px 10px;
   font-weight: bold;
   margin-bottom: 3px;
-  margin-left: auto;
+  text-decoration: none;
+  border-radius: 1px;
+  outline: none;
+}
+
+.btn-plus:hover {
+  background-color: #0269d9;
 }
 
 .create-activity {
@@ -456,6 +470,24 @@ i {
 .measurement-outer-section {
   width: 85%;
   margin-left: 15%;
+  padding-bottom: 60px;
+}
+
+.link-class {
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.active-button {
+  background-color: #42b5e8;
+}
+
+button {
+  outline: none !important;
+}
+
+.nav-link {
+  width: unset;
 }
 
 @media only screen and (max-width: 768px) {
@@ -469,9 +501,15 @@ i {
     top: unset;
   }
 
+  .nav-link {
+    width: 25%;
+    font-size: small;
+  }
+
   .link-div {
     height: 70px;
-    width: 25%;
+    width: 100%;
+    color: #fff;
   }
 
   .link-button {
