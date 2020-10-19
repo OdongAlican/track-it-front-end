@@ -16,7 +16,7 @@ const Activity = ({ activity }) => {
 
   return (
     <div data-testid="appActivity" className="main-section d-flex p-1 bg-white">
-      <div className="image-section p-3">
+      <div className="image-section">
         <img src={activity.avatar.url} alt="boohoo" className="image-det" />
       </div>
       <div className="activity-body ml-1">
@@ -44,13 +44,13 @@ const Activity = ({ activity }) => {
           >
             <button
               type="button"
-              className="button-details w-75 mr-1"
+              className="button-details"
             >
               Details
             </button>
           </Link>
-          <div>
-            <i className="far fa-trash-alt trash-section" onClick={() => deleteAct(activity.id)} />
+          <div className="activity-link">
+            <i className="far fa-trash-alt trash-section text-danger" onClick={() => deleteAct(activity.id)} />
           </div>
         </div>
       </div>

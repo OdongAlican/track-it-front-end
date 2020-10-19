@@ -60,7 +60,7 @@
   height: 150px;
   position: relative;
   margin: 11px 11px;
-  width: 45%;
+  width: 30%;
 }
 
 i {
@@ -89,7 +89,8 @@ i {
   bottom: 0;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  right: 0;
 }
 
 .links-info {
@@ -97,9 +98,10 @@ i {
   text-decoration: none;
   color: lightgray;
   font-weight: bold;
-  width: 70%;
+  width: 90%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .image-det {
@@ -127,6 +129,7 @@ i {
   height: 100%;
   background-color: #f3f4f6;
   width: 50%;
+  padding: 10px;
 }
 
 .activity-body {
@@ -362,8 +365,9 @@ i {
   justify-content: center;
   align-items: center;
   padding: 5px;
-  font-size: 150px;
+  font-size: 4em;
   color: #d1d2d6;
+  width: 45%;
 }
 
 .input-control {
@@ -457,6 +461,9 @@ i {
   color: #fff;
   margin-bottom: 2px;
   background-color: #42b5e8;
+  width: 85%;
+  display: flex;
+  justify-content: center;
 }
 
 .title-div-section {
@@ -490,6 +497,13 @@ button {
   width: unset;
 }
 
+.activity-link {
+  display: flex;
+  justify-content: center;
+  width: 8%;
+  align-items: center;
+}
+
 @media only screen and (max-width: 768px) {
   .footer {
     display: flex;
@@ -499,6 +513,16 @@ button {
     bottom: 0;
     height: 60px;
     top: unset;
+  }
+
+  .links-info {
+    justify-content: start;
+  }
+
+  .image-section {
+    height: 100%;
+    background-color: #f3f4f6;
+    width: 90%;
   }
 
   .nav-link {
@@ -519,10 +543,6 @@ button {
     background-color: #303944;
   }
 
-  .main-section {
-    height: 100px;
-  }
-
   .date-section {
     margin-left: 0;
   }
@@ -540,8 +560,37 @@ button {
     margin-left: 0;
   }
 
+  .main-section {
+    height: 150px;
+    position: relative;
+    margin: 11px 4px;
+    width: 47%;
+  }
+
   .activity-title {
     font-size: small;
     font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .main-section {
+    height: 105px;
+  }
+
+  .image-det {
+    width: 100%;
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .file-section {
+    width: 85%;
+    font-size: small;
+  }
+
+  .link-div {
+    font-size: x-small;
   }
 }
