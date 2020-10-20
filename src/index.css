@@ -77,7 +77,14 @@ i {
 }
 
 .summary-section::-webkit-scrollbar {
-  width: 0;
+  height: 4px;
+  width: 4px;
+  background: #aaa;
+}
+
+.summary-section::-webkit-scrollbar-thumb:horizontal {
+  background: #303944;
+  border-radius: 10px;
 }
 
 .card-stuff {
@@ -464,6 +471,7 @@ i {
   width: 85%;
   display: flex;
   justify-content: center;
+  border-radius: 3px;
 }
 
 .title-div-section {
@@ -515,6 +523,10 @@ button {
     top: unset;
   }
 
+  .lower-section-button {
+    width: 90%;
+  }
+
   .links-info {
     justify-content: start;
   }
@@ -523,6 +535,13 @@ button {
     height: 100%;
     background-color: #f3f4f6;
     width: 90%;
+  }
+
+  .start-watch,
+  .stop-watch {
+    width: 45%;
+    display: flex;
+    justify-content: center;
   }
 
   .nav-link {
@@ -592,5 +611,9 @@ button {
 
   .link-div {
     font-size: x-small;
+  }
+
+  .activity-body {
+    width: 90%;
   }
 }

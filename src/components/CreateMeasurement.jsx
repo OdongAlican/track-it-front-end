@@ -70,18 +70,18 @@ const CreateMeasurement = ({ location }) => {
         </div>
       </div>
       <div className="d-flex justify-content-center mt-4 bg-white p-2 lower-section-button">
-        <button type="button" onClick={startWatch} className="start-watch mr-1">Start</button>
-        <button type="button" onClick={stopWatch} className="stop-watch mr-1">
-          <Link
-            className="text-white"
-            to={{
-              pathname: `/activity/${activity.id}/measurements`,
-              state: activity,
-            }}
-          >
+        <button type="button" onClick={startWatch} className="start-watch mr-1 text-white">Start</button>
+        <Link
+          className="text-white stop-watch-link"
+          to={{
+            pathname: `/activity/${activity.id}/measurements`,
+            state: activity,
+          }}
+        >
+          <button type="button" onClick={stopWatch} className="stop-watch mr-1 text-white">
             Stop
-          </Link>
-        </button>
+          </button>
+        </Link>
       </div>
       <Footer />
     </div>
