@@ -525,6 +525,8 @@ button {
 
   .lower-section-button {
     width: 90%;
+
+    /* margin-bottom: 60px; */
   }
 
   .links-info {
@@ -537,8 +539,17 @@ button {
     width: 90%;
   }
 
-  .start-watch,
+  .stop-watch-link {
+    width: 45%;
+  }
+
   .stop-watch {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .start-watch {
     width: 45%;
     display: flex;
     justify-content: center;
@@ -615,5 +626,9 @@ button {
 
   .activity-body {
     width: 90%;
+  }
+
+  .lower-section-button {
+    margin-bottom: 60px;
   }
 }
