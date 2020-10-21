@@ -1,12 +1,9 @@
-/* eslint-disable no-unused-vars */
-import axios from 'axios';
+import { FetchActivityRequest, CreateActivityRequest, DeleteActivityRequest } from '../utils/api';
 
 export const FETCH_ACTIVITIES_REQUEST = 'FETCH_ACTIVITIES_REQUEST';
 export const FETCH_ACTIVITIES_SUCCESS = 'FETCH_ACTIVITIES_SUCCESS';
 export const FETCH_ACTIVITIES_FAILURE = 'FETCH_ACTIVITIES_FAILURE';
 export const DELETE_ACTIVITY = 'DELETE_ACTIVITY';
-
-const URL = 'https://enigmatic-cliffs-07216.herokuapp.com/activities';
 
 export const fetchActivitiesSuccess = activities => ({
   type: FETCH_ACTIVITIES_SUCCESS,
@@ -22,37 +19,40 @@ export const fetchActivitiesFailure = error => ({
   payload: error,
 });
 
-export const deleteActivity = id => {
-  axios.delete(`${URL}/${id}`, {
-    headers: { Authorization: `Bearer ${localStorage.user}` },
-  });
-  return {
-    type: DELETE_ACTIVITY,
-    payload: id,
-  };
+export const deleteActivityRequest = id => ({
+  type: DELETE_ACTIVITY,
+  payload: id,
+});
+
+export const deleteActivity = id => async dispatch => {
+  const method = 'delete';
+  try {
+    await DeleteActivityRequest(method, id);
+    dispatch(deleteActivityRequest(id));
+  } catch (error) {
+    dispatch(fetchActivitiesFailure(error));
+  }
 };
 
-export const fetchActivities = () => dispatch => {
-  axios.get(
-    URL,
-    { headers: { Authorization: `Bearer ${localStorage.user}` } },
-  ).then(response => {
+export const fetchActivities = () => async dispatch => {
+  const method = 'get';
+  try {
+    const response = await FetchActivityRequest(method);
     const activities = response.data;
     dispatch(fetchActivitiesSuccess(activities));
-  }).catch(error => {
-    const errMsg = error;
-    dispatch(fetchActivitiesFailure(errMsg));
-  });
+  } catch (error) {
+    dispatch(fetchActivitiesFailure(error));
+  }
 };
 
 export const createActivity = (form, history) => async dispatch => {
   history.push('/activities');
   dispatch(fetchActivitiesRequest());
-  await axios.post(URL, form, {
-    headers: { Authorization: `Bearer ${localStorage.user}` },
-  }).then(response => {
+  const method = 'post';
+  try {
+    await CreateActivityRequest(method, form);
     dispatch(fetchActivities());
-  }).catch(error => {
+  } catch (error) {
     dispatch(fetchActivitiesFailure(error));
-  });
+  }
 };
