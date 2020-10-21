@@ -1,10 +1,7 @@
-/* eslint-disable no-unused-vars */
-import axios from 'axios';
+import { LoadMeasurementRequest, CreateMeasurementRequest } from '../utils/api';
 
 export const FETCH_MEASUREMENTS_SUCCESS = 'FETCH_MEASUREMENTS_SUCCESS';
 export const FETCH_MEASUREMENTS_FAILURE = 'FETCH_MEASUREMENTS_FAILURE';
-
-const URL = 'https://enigmatic-cliffs-07216.herokuapp.com/activities';
 
 export const fetchMeasurementsSuccess = measurements => ({
   type: FETCH_MEASUREMENTS_SUCCESS,
@@ -16,23 +13,25 @@ export const fetchMeasurementsFailure = error => ({
   payload: error,
 });
 
-export const fetchMeasurements = id => dispatch => {
-  axios.get(`${URL}/${id}/measurements`,
-    { headers: { Authorization: `Bearer ${localStorage.user}` } }).then(response => {
+export const fetchMeasurements = id => async dispatch => {
+  const method = 'get';
+  try {
+    const response = await LoadMeasurementRequest(method, id);
     const measurements = response.data;
     dispatch(fetchMeasurementsSuccess(measurements));
-  }).catch(error => {
+  } catch (error) {
     const errMsg = error;
     dispatch(fetchMeasurementsFailure(errMsg));
-  });
+  }
 };
 
-export const createMeasurement = ({ duration, date }, activityId) => dispatch => {
-  axios.post(`${URL}/${activityId}/measurements`, { duration, date }, {
-    headers: { Authorization: `Bearer ${localStorage.user}` },
-  }).then(response => {
+export const createMeasurement = ({ duration, date }, activityId) => async dispatch => {
+  const method = 'post';
+  const data = { duration, date };
+  try {
+    await CreateMeasurementRequest(method, data, activityId);
     dispatch(fetchMeasurements(activityId));
-  }).catch(error => {
+  } catch (error) {
     dispatch(fetchMeasurementsFailure(error));
-  });
+  }
 };
