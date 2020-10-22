@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches CreatActivity snapshot 1`] = `
+Array [
+  <div
+    className="create-activity"
+    data-testid="appCreateActivity"
+  >
+    <div
+      className="create-activity-inner pb-3"
+    >
+      <div
+        className="activity-heading mb-2 p-3"
+      >
+        <span>
+          You can add a photo to your activity
+        </span>
+      </div>
+      <div
+        className="image-upload m-3 p-2 d-flex"
+      >
+        <div
+          className="left-image"
+        >
+          <i
+            className="fas fa-tv"
+          />
+        </div>
+        <div
+          className="right-image"
+        >
+          <i
+            className="fas fa-church"
+          />
+        </div>
+      </div>
+      <div>
+        <form
+          onSubmit={[Function]}
+        >
+          <input
+            className="input-control mb-2"
+            onChange={[Function]}
+            placeholder="Enter Title"
+            type="text"
+            value=""
+          />
+          <input
+            className="input-control"
+            onChange={[Function]}
+            placeholder="Enter Total"
+            type="number"
+            value=""
+          />
+          <input
+            className="mt-2 btn-control file-section"
+            onChange={[Function]}
+            type="file"
+          />
+          <button
+            className="btn-control mt-1"
+            type="submit"
+          >
+            Create
+          </button>
+        </form>
+      </div>
+    </div>
+    <div
+      className="footer"
+      data-testid="appFooter"
+    >
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/activities"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="far fa-chart-bar footer-btn"
+          />
+          <p>
+            Home
+          </p>
+        </div>
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/create-activity"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="fas fa-chart-line footer-btn"
+          />
+          <p>
+            Create Activity
+          </p>
+        </div>
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/information"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="fas fa-chart-pie footer-btn"
+          />
+          <p>
+            Information
+          </p>
+        </div>
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/activities"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="fas fa-ellipsis-h footer-btn"
+          />
+          <p>
+            More
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>,
+  ",",
+]
+`;

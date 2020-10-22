@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches Footer snapshot 1`] = `
+<div
+  className="footer"
+  data-testid="appFooter"
+>
+  <a
+    aria-current={null}
+    className="nav-link"
+    href="/activities"
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "#ABAEB3",
+        "padding": 0,
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      className="link-div"
+      data-testid="appButton"
+    >
+      <i
+        className="far fa-chart-bar footer-btn"
+      />
+      <p>
+        Home
+      </p>
+    </div>
+  </a>
+  <a
+    aria-current={null}
+    className="nav-link"
+    href="/create-activity"
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "#ABAEB3",
+        "padding": 0,
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      className="link-div"
+      data-testid="appButton"
+    >
+      <i
+        className="fas fa-chart-line footer-btn"
+      />
+      <p>
+        Create Activity
+      </p>
+    </div>
+  </a>
+  <a
+    aria-current={null}
+    className="nav-link"
+    href="/information"
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "#ABAEB3",
+        "padding": 0,
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      className="link-div"
+      data-testid="appButton"
+    >
+      <i
+        className="fas fa-chart-pie footer-btn"
+      />
+      <p>
+        Information
+      </p>
+    </div>
+  </a>
+  <a
+    aria-current={null}
+    className="nav-link"
+    href="/activities"
+    onClick={[Function]}
+    style={
+      Object {
+        "color": "#ABAEB3",
+        "padding": 0,
+        "textDecoration": "none",
+      }
+    }
+  >
+    <div
+      className="link-div"
+      data-testid="appButton"
+    >
+      <i
+        className="fas fa-ellipsis-h footer-btn"
+      />
+      <p>
+        More
+      </p>
+    </div>
+  </a>
+</div>
+`;

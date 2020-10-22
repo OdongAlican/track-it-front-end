@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches CreateMeasurement snapshot 1`] = `
+Array [
+  <div
+    className="measure-section"
+    data-testid="appCreateMeasurement"
+  >
+    <div
+      className="activity-header"
+    >
+      <p
+        style={
+          Object {
+            "color": "grey",
+          }
+        }
+      >
+        Measure
+         
+      </p>
+    </div>
+    <div
+      className="mx-auto mt-4 clock-border"
+    >
+      <div
+        className="h1 d-flex justify-content-center"
+      >
+        <p>
+          00:00:00:00
+        </p>
+      </div>
+    </div>
+    <div
+      className="d-flex justify-content-center mt-4 bg-white p-2 lower-section-button"
+    >
+      <button
+        className="start-watch mr-1 text-white"
+        onClick={[Function]}
+        type="button"
+      >
+        Start
+      </button>
+      <a
+        className="text-white stop-watch-link"
+        href="/activity/undefined/measurements"
+        onClick={[Function]}
+      >
+        <button
+          className="stop-watch mr-1 text-white"
+          onClick={[Function]}
+          type="button"
+        >
+          Stop
+        </button>
+      </a>
+    </div>
+    <div
+      className="footer"
+      data-testid="appFooter"
+    >
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/activities"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="far fa-chart-bar footer-btn"
+          />
+          <p>
+            Home
+          </p>
+        </div>
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/create-activity"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="fas fa-chart-line footer-btn"
+          />
+          <p>
+            Create Activity
+          </p>
+        </div>
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/information"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="fas fa-chart-pie footer-btn"
+          />
+          <p>
+            Information
+          </p>
+        </div>
+      </a>
+      <a
+        aria-current={null}
+        className="nav-link"
+        href="/activities"
+        onClick={[Function]}
+        style={
+          Object {
+            "color": "#ABAEB3",
+            "padding": 0,
+            "textDecoration": "none",
+          }
+        }
+      >
+        <div
+          className="link-div"
+          data-testid="appButton"
+        >
+          <i
+            className="fas fa-ellipsis-h footer-btn"
+          />
+          <p>
+            More
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>,
+  ",",
+]
+`;
